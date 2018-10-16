@@ -1,53 +1,36 @@
+﻿
 # Teste para vaga de Analista Desenvolvedor PHP
+## Informações Gerais
+O projeto foi desenvolvido utilizando as seguintes tecnologias e metodologias:
 
-## Projeto
-Desenvolver uma aplicação simples com um CRUD de produtos
+ - PHP
+ - HTML
+ - Bootstrap
+ - Javascript (com JQuery)
+ - Padrão MVC
+ - Phinx (biblioteca para gerenciamento de  *migrations*)
+ - Composer (gerenciador de dependências)
 
-# Requisitos
+## Pré-Requisitos
+- **PHP** 7.x
+- Banco de dados **MySQL**
+- **Composer** (informações sobre como baixar e instalar [aqui](https://getcomposer.org/))
 
-#### CRUD de Produtos
+## Instruções de instalação:
+ - Fazer fork do repositório
+ - Editar o arquivo **/config/database.php** com as configurações do banco de dados da aplicação (o banco já deve existir)
+ - A pasta-raiz padrão da aplicação é **teste-php**, caso  deseje modificar, altere o valor da constante `BASE_URL` no arquivo **config.php** na raiz do projeto
+ - Rodar o script **install.php** na raiz do projeto.
+	 - Esse script carrega as dependências do projeto, cria as tabelas no banco de dados e popula com informações fictícias.
+	 - Ao fim da instalação você será redirecionado para a "home" da aplicação.
 
-Criar o gerenciamento de categorias do Sistema, onde seja possível Listar, Criar, Editar e Excluir Produtos.
+### Problemas com o script "install.php"?
 
+Se o script de instalação **install.php** não estiver funcionando tente verificar o seguinte:
 
-##### Atributos de um Produto são:
-- Nome
-- Descrição
-- Quantidade
-- Preço
-- Data/Hora de Cadastro
-- Data/Hora da Última Atualização
+ - Verifique se a sua instalação do **Composer** foi feita de forma global, ou seja, você consegue rodar através do comando `composer` direto no seu console.
+ - Verifique se o banco de dados informado no arquivo **/config/database.php** existe
+ - Verifique as informações de banco de dados foram preenchidas no arquivo **/config/database.php** estão corretas
 
-## Descrição da Aplicação
+### Obrigado!
 
-#### Home
-
-- Uma home simples com um menu para o Controle de **Produtos**
-- Deve apresentar um quadro que mostre todos os produtos que estão com 3 ou menos volumes em estoque.
-- Deve apresentar um quadro com os cinco últimos produtos movimentados no estoque.
-
-#### Controle de Produtos
-
-- Um botão no topo para o cadastramento de um novo **Produto**.
-- Uma listagem com todos os produtos cadastrados no sistema, ordenados por **Nome** e **Preço**. Os campos que serão apresentados na listagem são: id, nome, quantidade, preço e Ação.
-    - A coluna com o nome do produto deve ser um link que direciona o usuário aos detalhes do produto (*Pode ser um Modal*).
-    - A coluna Ação deve possuir quatro botões, **Editar**, **Excluir**, **Reduzir Estoque**, **Aumentar Estoque**.
-        - Botão Editar - Deve direcionar o usuário a uma tela onde o Nome, Descrição, Preço e Quantidade do produto possam ser Alterados.
-        - Botão Excluir - Exclui o Produto do Sistema.
-        - Botão Reduzir o Estoque - Deve reduzir em 1 a quantidade do Produto no Estoque.
-        - Botão Aumentar o Estoque - Deve aumentar em 1 a quantidade do Produto no Estoque.
-    - As linhas onde a quantidade de produtos seja igual ou inferior a 3 devem possuir um destaque a escolha do desenvolvedor.
-
-
-# Instruções:
-- Faça fork desse repositório envie um Pull Request quando estiver pronto.
-- Últilizar php 5.6 ou superior
-- Últilizar Banco de Dados MySQL ou MariaDB
-    - As tabelas devem ser criadas através de Migrations.
-- Obrigatório o uso de **Orientação a Objeto**.
-- Últilizar as bibliotecas `pdo` para efetuar a comunicação com o Banco de Dados
-- Seguir os padrões das **PSRs** (Saiba mais [aqui](http://br.phptherightway.com/) e [aqui](https://www.php-fig.org/psr/)).
-- Criar um `README.md` com as instruções de como instalar a aplicação. (Pasta raiz, migrations, configuração do ambiente e banco de dados)
-
-
-### Boa Sorte!
