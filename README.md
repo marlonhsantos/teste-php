@@ -10,6 +10,8 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias e metodologias:
  - Padrão MVC
  - Phinx (biblioteca para gerenciamento de  *migrations*)
  - Composer (gerenciador de dependências)
+ 
+A aplicação possui 15 produtos populados aleatóriamente para manipulação livre.
 
 ## Pré-Requisitos
 - **PHP** 7.x
@@ -20,7 +22,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias e metodologias:
  - Fazer fork do repositório
  - Editar o arquivo **/config/database.php** com as configurações do banco de dados da aplicação (o banco já deve existir)
  - A pasta-raiz padrão da aplicação é **teste-php**, caso  deseje modificar, altere o valor da constante `BASE_URL` no arquivo **config.php** na raiz do projeto
- - Rodar o script **install.php** na raiz do projeto.
+ - Rodar o script **install.php** na raiz do projeto através do seu browser (ex.: http://localhost/teste-php/install.php).
 	 - Esse script carrega as dependências do projeto, cria as tabelas no banco de dados e popula com informações fictícias.
 	 - Ao fim da instalação você será redirecionado para a "home" da aplicação.
 
