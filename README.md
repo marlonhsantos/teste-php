@@ -11,7 +11,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias e metodologias:
  - Phinx (biblioteca para gerenciamento de  *migrations*)
  - Composer (gerenciador de dependências)
  
-A aplicação possui 15 produtos populados aleatóriamente para manipulação livre.
+A aplicação possui 15 produtos populados aleatoriamente para manipulação livre.
 
 ## Pré-Requisitos
 - **PHP** 7.x
@@ -33,6 +33,16 @@ Se o script de instalação **install.php** não estiver funcionando tente verif
  - Verifique se a sua instalação do **Composer** foi feita de forma global, ou seja, você consegue rodar através do comando `composer` direto no seu console.
  - Verifique se o banco de dados informado no arquivo **/config/database.php** existe
  - Verifique as informações de banco de dados foram preenchidas no arquivo **/config/database.php** estão corretas
+ - Se tudo estiver correto mas a tabela **produtos** ainda não tiver sido criada no banco de dados, você pode tentar a Instalação Manual.
+ 
+ #### Instalação Manual
+ 
+ Se a instalação pelo script **install.php** falhou é possível seguir os seguintes passos manualmente:
+ - No console, navegue até a pasta raiz do projeto e digite os seguintes comandos:
+ 1. `composer update`
+ 2. `vendor/bin/phinx migrate`
+ 3. `vendor/bin/phinx seed:run`
+ 
 
 ### Obrigado!
 
